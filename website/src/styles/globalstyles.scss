@@ -1,0 +1,58 @@
+@import './reset.scss';
+@import url('https://fonts.cdnfonts.com/css/bochan');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+  --color-brand-1: #263A32;
+  --color-brand-2: #B35A3A;
+  --color-brand-secondary-1: #C2AA96;
+  --color-brand-secondary-2: #E4CBAC;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  --font-1: 8rem;
+  --font-2: 6rem;
+  --font-2-5: 5rem;
+  --font-3: 3.2rem;
+  --font-4: 1.5rem;
+  --font-5: 1.2rem;
+  --font-6: 1rem;
+  --font-7: 0.875rem;
+  --font-8: 0.825rem;
+  --font-9: 0.75rem;
+
+
+  --font-weight-1: 700;
+  --font-weight-2: 500;
+  --font-weight-3: 400;
+  --font-weight-4: 300;
+
+  --font-line-height-1: normal;
+
+  --font-style: normal;
+
+  --font-type: "Satoshi", sans-serif;
+  --font-type-2: "Plus Jakarta Sans", sans-serif;
+  --font-rena: "Bochan", sans-serif;
+}
+
+#root {
+  font-style: var(--font-style);
+  color: var(--color-white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-black);
+}
+
+button {
+  cursor: pointer;
+}
