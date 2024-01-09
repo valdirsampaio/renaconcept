@@ -1,6 +1,7 @@
 @import './reset.scss';
 @import url('https://fonts.cdnfonts.com/css/bochan');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://db.onlinewebfonts.com/c/70157cb1204ca26691b11450306cd5f4?family=Harmonia+Sans+W06+Semi+Bold+Cn');
 
 
 :root {
@@ -10,6 +11,16 @@
   --color-brand-secondary-2: #E4CBAC;
   --color-white: #FFFFFF;
   --color-black: #000000;
+  --color-grey-0: #15171a;
+  --color-grey-1: #212529;
+  --color-grey-2: #2b2f33;
+  --color-grey-3: #868e96;
+  --color-grey-4: #adb5bd;
+  --color-grey-5: #ced4da;
+  --color-grey-6: #dee2e6;
+  --color-grey-7: #f1f3f5;
+  --color-grey-8: #f8f9fa;
+  --color-grey-9: #fdfeff;
 
   --font-1: 8rem;
   --font-2: 6rem;
@@ -32,14 +43,15 @@
 
   --font-style: normal;
 
-  --font-type: "Satoshi", sans-serif;
-  --font-type-2: "Plus Jakarta Sans", sans-serif;
+  --font-type: "Plus Jakarta Sans", sans-serif;
+  --font-type-2: "Inter", sans-serif;
+  --font-type-3: "Harmonia Sans W06 Semi Bold Cn", sans-serif;
   --font-rena: "Bochan", sans-serif;
 }
 
 #root {
   font-style: var(--font-style);
-  color: var(--color-white);
+  color: var(--color-black);
 
   display: flex;
   flex-direction: column;
@@ -50,7 +62,7 @@
 }
 
 body {
-  background-color: var(--color-black);
+  background-color: var(--color-white);
 }
 
 button {

@@ -1,7 +1,7 @@
 import "./styles/globalstyles.scss";
 import React, { useContext } from "react";
 import { Loading } from "./components/Loading";
-import { RoutesMain } from "./router";
+import { RouterMain } from "./router";
 import { UserContext } from "./providers/UserContext";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   
     return (
       <>
-        {loading ? <Loading /> : <RoutesMain />}
+        {loading ? <Loading /> : <RouterMain />}
       </>
     )
   }
