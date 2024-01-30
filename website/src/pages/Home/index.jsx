@@ -2,9 +2,10 @@ import React from "react"
 import { DefaultTemplate } from "../../components/DefaultTemplate";
 import styles from "./style.module.scss";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { carouselList, categoriesList } from "../../providers/database";
+import { carouselList, categoriesList, products } from "../../providers/database";
 import { CarouselCard } from "./CarouselCard";
 import { CategoriesCard } from "./CategoriesCard";
+import { ColectionCard } from "./ColectionCard";
 
 
 export const Home = () => {
@@ -36,11 +37,34 @@ export const Home = () => {
                             </Swiper>
                         </section>
                         <section className={styles.secondSection}>
+                            <h3 className={styles.sectionTitle}>Categorias</h3>
                             <ul className={styles.categoriesList}>
                                 {
-                                    categoriesList.map((item) => (
-                                        <CategoriesCard item={item} />
-                                    ))
+                                    categoriesList.map((item) => {
+                                        return (
+                                            <CategoriesCard key={item.id} item={item} />
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </section>
+                        <section className={styles.thirdSection}>
+                            <h3 className={styles.sectionSubtitle}>Conheça nossa nova coleção</h3>
+                            <div className={styles.titleContainer}>
+                                <h3 className={styles.sectionTitle}>Novidades</h3>
+                                <h3 className={styles.colectionTitle}>Alto Verão</h3>
+                            </div>
+                            <ul className={styles.colectionList}>
+                                {
+                                    products.map((product) => {
+                                        if (product.colection === "new") {
+                                        return (
+                                        <ColectionCard key={product.id} product={product} />
+                                        )
+                                        } else {
+                                            null
+                                        }
+                                    })
                                 }
                             </ul>
                         </section>
