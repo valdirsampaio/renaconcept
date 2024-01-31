@@ -10,8 +10,8 @@ export const ColectionCard = ({ product }) => {
                 </section>
                 <section className={styles.infoContainer}>
                     <h3 className={styles.productName}>{product.type} {product.name}</h3>
-                    <h2 className={styles.productPrice}>R$ {product.price.toFixed(2)}</h2>
-                    <p className={styles.productParcels}><span>3</span>x de <span>R$ {(product.price/3).toFixed(2)}</span> sem juros</p>
+                    <h2 className={styles.productPrice}>R$ {product.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h2>
+                    <p className={styles.productParcels}><span>3</span>x de <span>R$ {(product.price/3).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</span> sem juros</p>
                 </section>
             </li>
         </>

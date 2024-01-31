@@ -6,6 +6,9 @@ import { carouselList, categoriesList, products } from "../../providers/database
 import { CarouselCard } from "./CarouselCard";
 import { CategoriesCard } from "./CategoriesCard";
 import { ColectionCard } from "./ColectionCard";
+import truck from "../../assets/icons/truck.png";
+import bag from "../../assets/icons/sport-bag.png";
+import woman from "../../assets/icons/woman.png";
 
 
 export const Home = () => {
@@ -58,14 +61,33 @@ export const Home = () => {
                                 {
                                     products.map((product) => {
                                         if (product.colection === "new") {
-                                        return (
-                                        <ColectionCard key={product.id} product={product} />
-                                        )
+                                            return (
+                                                <ColectionCard key={product.id} product={product} />
+                                            )
                                         } else {
                                             null
                                         }
                                     })
                                 }
+                            </ul>
+                        </section>
+                        <section className={styles.forthSection}>
+                            <ul className={styles.sectionContainer}>
+                                <li className={styles.cardItem}>
+                                    <img src={truck} alt="iconImg" className={styles.iconImg} />
+                                    <h3 className={styles.cardTitle}>ENTREGAS</h3>
+                                    <p className={styles.cardParagraph}>em todo o Brasil</p>
+                                </li>
+                                <li className={styles.cardItem}>
+                                    <img src={woman} alt="iconImg" className={styles.iconImg} />
+                                    <h3 className={styles.cardTitle}>SHOWROOM</h3>
+                                    <p className={styles.cardParagraph}>com hora marcada</p>
+                                </li>
+                                <li className={styles.cardItem}>
+                                    <img src={bag} alt="iconImg" className={styles.iconImg} />
+                                    <h3 className={styles.cardTitle}>MALINHA</h3>
+                                    <p className={styles.cardParagraph}>para prova no conforto da sua casa</p>
+                                </li>
                             </ul>
                         </section>
                     </div>

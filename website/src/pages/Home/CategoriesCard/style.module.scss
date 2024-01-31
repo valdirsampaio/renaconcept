@@ -10,18 +10,31 @@
     gap: 1rem;
     padding-top: 1rem;
 
-    .categorieImg {
-        width: 7rem;
-        height: 7rem;
-        position: relative;
+    .imageContainer {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        object-fit: cover;
+    
+        width: 7rem;
+        height: 7rem;
         border-radius: 50%;
-        -webkit-transition: -webkit-transform .5s ease;
-        transition: transform 1s ease;
+        gap: 1rem;
+        padding-top: 1rem;
+
+        .categorieImg {
+            width: 7rem;
+            height: 7rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            object-fit: cover;
+            border-radius: 50%;
+            -webkit-transition: -webkit-transform .5s ease;
+            transition: transform 1s ease;
+        }
     }
 
     .categorieTitle {
@@ -38,10 +51,12 @@
     }
 
     &:hover {
-        .categorieImg {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-            border: 1px solid var(--color-brand-1);
+        .imageContainer {
+            .categorieImg {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+                border: 1px solid var(--color-brand-1);
+            }
         }
 
         .categorieTitle {
